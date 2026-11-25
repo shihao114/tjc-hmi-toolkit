@@ -1,0 +1,460 @@
+{
+  "resolution": [
+    480,
+    272
+  ],
+  "commands": {
+    "mode": 3,
+    "pump": 1,
+    "fan": 2,
+    "growSwitch": 4,
+    "minus": 6,
+    "plus": 7,
+    "uvRequest": 5
+  },
+  "pages": [
+    {
+      "name": "page0",
+      "fields": [
+        {
+          "n": "t6",
+          "key": "alarm",
+          "x": 301,
+          "y": 10,
+          "w": 169,
+          "h": 29,
+          "size": 15,
+          "bg": "#11191B",
+          "fg": "#B6F78A",
+          "align": "right",
+          "font": 0
+        },
+        {
+          "n": "t0",
+          "key": "temp",
+          "x": 77,
+          "y": 90,
+          "w": 180,
+          "h": 52,
+          "size": 40,
+          "bg": "#1C3530",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t1",
+          "key": "humidity",
+          "x": 75,
+          "y": 224,
+          "w": 169,
+          "h": 32,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t2",
+          "key": "lux",
+          "x": 283,
+          "y": 224,
+          "w": 169,
+          "h": 32,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        }
+      ],
+      "hits": [
+        {
+          "n": "nav0",
+          "title": "总览",
+          "x": 0,
+          "y": 54,
+          "w": 52,
+          "h": 62,
+          "act": "page0"
+        },
+        {
+          "n": "nav1",
+          "title": "环境",
+          "x": 0,
+          "y": 122,
+          "w": 52,
+          "h": 62,
+          "act": "page1"
+        },
+        {
+          "n": "nav2",
+          "title": "设备",
+          "x": 0,
+          "y": 190,
+          "w": 52,
+          "h": 62,
+          "act": "page2"
+        },
+        {
+          "n": "env",
+          "title": "环境详情",
+          "x": 63,
+          "y": 49,
+          "w": 407,
+          "h": 135,
+          "act": "page1"
+        },
+        {
+          "n": "moret1",
+          "title": "空气湿度",
+          "x": 63,
+          "y": 192,
+          "w": 199,
+          "h": 70,
+          "act": "page1"
+        },
+        {
+          "n": "moret2",
+          "title": "环境光照",
+          "x": 271,
+          "y": 192,
+          "w": 199,
+          "h": 70,
+          "act": "page1"
+        }
+      ],
+      "background": "backgrounds/page0.png"
+    },
+    {
+      "name": "page1",
+      "fields": [
+        {
+          "n": "t0",
+          "key": "temp",
+          "x": 75,
+          "y": 77,
+          "w": 174,
+          "h": 31,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t1",
+          "key": "humidity",
+          "x": 283,
+          "y": 77,
+          "w": 174,
+          "h": 31,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t2",
+          "key": "lux",
+          "x": 75,
+          "y": 149,
+          "w": 174,
+          "h": 31,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t3",
+          "key": "soil",
+          "x": 283,
+          "y": 149,
+          "w": 174,
+          "h": 31,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t4",
+          "key": "water",
+          "x": 75,
+          "y": 221,
+          "w": 174,
+          "h": 31,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t5",
+          "key": "co2",
+          "x": 283,
+          "y": 221,
+          "w": 174,
+          "h": 31,
+          "size": 24,
+          "bg": "#202C2E",
+          "fg": "#F1F5ED",
+          "align": "left",
+          "font": 1
+        }
+      ],
+      "hits": [
+        {
+          "n": "nav0",
+          "title": "总览",
+          "x": 0,
+          "y": 54,
+          "w": 52,
+          "h": 62,
+          "act": "page0"
+        },
+        {
+          "n": "nav1",
+          "title": "环境",
+          "x": 0,
+          "y": 122,
+          "w": 52,
+          "h": 62,
+          "act": "page1"
+        },
+        {
+          "n": "nav2",
+          "title": "设备",
+          "x": 0,
+          "y": 190,
+          "w": 52,
+          "h": 62,
+          "act": "page2"
+        }
+      ],
+      "background": "backgrounds/page1.png"
+    },
+    {
+      "name": "page2",
+      "fields": [
+        {
+          "n": "t9",
+          "key": "mode",
+          "x": 381,
+          "y": 10,
+          "w": 80,
+          "h": 28,
+          "size": 16,
+          "bg": "#1C3530",
+          "fg": "#B6F78A",
+          "align": "right",
+          "font": 0
+        },
+        {
+          "n": "t7",
+          "key": "pump",
+          "x": 75,
+          "y": 101,
+          "w": 165,
+          "h": 34,
+          "size": 22,
+          "bg": "#202C2E",
+          "fg": "#B6F78A",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t8",
+          "key": "fan",
+          "x": 283,
+          "y": 101,
+          "w": 165,
+          "h": 34,
+          "size": 22,
+          "bg": "#202C2E",
+          "fg": "#B6F78A",
+          "align": "left",
+          "font": 1
+        }
+      ],
+      "hits": [
+        {
+          "n": "nav0",
+          "title": "总览",
+          "x": 0,
+          "y": 54,
+          "w": 52,
+          "h": 62,
+          "act": "page0"
+        },
+        {
+          "n": "nav1",
+          "title": "环境",
+          "x": 0,
+          "y": 122,
+          "w": 52,
+          "h": 62,
+          "act": "page1"
+        },
+        {
+          "n": "nav2",
+          "title": "设备",
+          "x": 0,
+          "y": 190,
+          "w": 52,
+          "h": 62,
+          "act": "page2"
+        },
+        {
+          "n": "m2",
+          "title": "切换模式",
+          "x": 331,
+          "y": 2,
+          "w": 141,
+          "h": 43,
+          "act": "mode"
+        },
+        {
+          "n": "m0",
+          "title": "灌溉水泵",
+          "x": 63,
+          "y": 49,
+          "w": 199,
+          "h": 102,
+          "act": "pump"
+        },
+        {
+          "n": "m1",
+          "title": "通风风扇",
+          "x": 271,
+          "y": 49,
+          "w": 199,
+          "h": 102,
+          "act": "fan"
+        },
+        {
+          "n": "lights",
+          "title": "进入灯光控制",
+          "x": 63,
+          "y": 161,
+          "w": 407,
+          "h": 101,
+          "act": "page3"
+        }
+      ],
+      "background": "backgrounds/page2.png"
+    },
+    {
+      "name": "page3",
+      "fields": [
+        {
+          "n": "t10",
+          "key": "grow",
+          "x": 77,
+          "y": 91,
+          "w": 143,
+          "h": 53,
+          "size": 37,
+          "bg": "#1C3530",
+          "fg": "#B6F78A",
+          "align": "left",
+          "font": 1
+        },
+        {
+          "n": "t11",
+          "key": "uv",
+          "x": 330,
+          "y": 208,
+          "w": 125,
+          "h": 36,
+          "size": 19,
+          "bg": "#202C2E",
+          "fg": "#F1C786",
+          "align": "right",
+          "font": 0
+        }
+      ],
+      "hits": [
+        {
+          "n": "nav0",
+          "title": "总览",
+          "x": 0,
+          "y": 54,
+          "w": 52,
+          "h": 62,
+          "act": "page0"
+        },
+        {
+          "n": "nav1",
+          "title": "环境",
+          "x": 0,
+          "y": 122,
+          "w": 52,
+          "h": 62,
+          "act": "page1"
+        },
+        {
+          "n": "nav2",
+          "title": "设备",
+          "x": 0,
+          "y": 190,
+          "w": 52,
+          "h": 62,
+          "act": "page2"
+        },
+        {
+          "n": "back",
+          "title": "返回设备",
+          "x": 55,
+          "y": 1,
+          "w": 43,
+          "h": 42,
+          "act": "page2"
+        },
+        {
+          "n": "minus",
+          "title": "−",
+          "x": 265,
+          "y": 103,
+          "w": 53,
+          "h": 53,
+          "act": "minus"
+        },
+        {
+          "n": "plus",
+          "title": "+",
+          "x": 326,
+          "y": 103,
+          "w": 53,
+          "h": 53,
+          "act": "plus"
+        },
+        {
+          "n": "growSwitch",
+          "title": "开关",
+          "x": 392,
+          "y": 103,
+          "w": 66,
+          "h": 53,
+          "act": "growSwitch"
+        },
+        {
+          "n": "m4",
+          "title": "查看紫外灯状态",
+          "x": 63,
+          "y": 191,
+          "w": 407,
+          "h": 71,
+          "act": "uvRequest"
+        }
+      ],
+      "background": "backgrounds/page3.png"
+    }
+  ]
+}

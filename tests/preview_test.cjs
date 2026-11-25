@@ -1,0 +1,10 @@
+const path = require('node:path');
+const fs = require('fs'), vm = require('vm'), assert = require('node:assert/strict');
+const html = fs.readFileSync(path.join(__dirname, '../examples/greenhouse/preview.html'),'utf8');
+const element = () => ({style:{},children:[],append(x){this.children.push(x)},replaceChildren(){this.children=[]},setAttribute(k,v){this[k]=v}});
+const screen=element(), hint=element(), c={document:{querySelector:s=>s==='#screen'?screen:hint,createElement:element}};
+vm.createContext(c);vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],c);
+const read=k=>vm.runInContext(k,c);
+const tap=name=>{const node=screen.children.find(x=>x['aria-label']===name);assert.ok(node,name);node.onclick()};
+tap('环境详情'); assert.equal(read('page'),1); tap('设备');tap('灌溉水泵');assert.equal(read('live.pump'),'ON');tap('通风风扇');assert.equal(read('live.fan'),'OFF');tap('切换模式');assert.equal(read('live.mode'),'AUTO');
+tap('进入灯光控制');assert.equal(read('page'),3);tap('+');assert.equal(read('live.grow'),'90%');assert.equal(read('live.mode'),'MAN');for(let i=0;i<11;i++)tap('+');assert.equal(read('live.grow'),'100%');tap('开关');assert.equal(read('live.grow'),'OFF');tap('开关');assert.equal(read('live.grow'),'100%');tap('−');assert.equal(read('live.grow'),'90%');tap('查看紫外灯状态');assert.equal(read('live.uv'),'LOCK');tap('返回设备');tap('总览');assert.equal(read('page'),0);console.log('Navigation and actuator simulation checks passed');
